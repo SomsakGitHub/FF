@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MxE-PT-5MK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Location-->
+        <scene sceneID="coF-uo-Sj7">
+            <objects>
+                <viewController id="HPZ-FB-C2R" customClass="LocationVC" customModule="FindFriends" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eTM-Uv-ocD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vhL-i5-rwc">
+                                <rect key="frame" x="0.0" y="61" width="414" height="774"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vN-sd-dDO" userLabel="Register" customClass="ButtonIBDesignable" customModule="FindFriends" customModuleProvider="target">
+                                <rect key="frame" x="51" y="718" width="312" height="44"/>
+                                <color key="backgroundColor" red="0.72549019609999998" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CJN-Nh-CgV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                <state key="normal" title="Accept">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="acceptAction:" destination="HPZ-FB-C2R" eventType="touchUpInside" id="Hty-9d-U9G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s9O-5D-Cfy"/>
+                        <color key="backgroundColor" red="0.15686274509803921" green="0.1764705882352941" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vhL-i5-rwc" firstAttribute="height" secondItem="s9O-5D-Cfy" secondAttribute="height" id="Ri0-7P-vnJ"/>
+                            <constraint firstItem="s9O-5D-Cfy" firstAttribute="bottom" secondItem="4vN-sd-dDO" secondAttribute="bottom" constant="100" id="WNe-9p-R3f"/>
+                            <constraint firstItem="4vN-sd-dDO" firstAttribute="width" secondItem="eTM-Uv-ocD" secondAttribute="width" multiplier="0.753623" id="m75-Sj-rFD"/>
+                            <constraint firstItem="vhL-i5-rwc" firstAttribute="width" secondItem="s9O-5D-Cfy" secondAttribute="width" id="qVZ-jX-KSO"/>
+                            <constraint firstItem="vhL-i5-rwc" firstAttribute="centerY" secondItem="eTM-Uv-ocD" secondAttribute="centerY" id="uDl-4Z-Sqo"/>
+                            <constraint firstItem="vhL-i5-rwc" firstAttribute="centerX" secondItem="eTM-Uv-ocD" secondAttribute="centerX" id="woY-Kj-OPM"/>
+                            <constraint firstItem="4vN-sd-dDO" firstAttribute="centerX" secondItem="eTM-Uv-ocD" secondAttribute="centerX" id="xZJ-Fb-cGT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Location" id="Ysb-W7-tmD"/>
+                    <connections>
+                        <outlet property="acceptBTN" destination="4vN-sd-dDO" id="fBe-dH-Yvg"/>
+                        <outlet property="mapView" destination="vhL-i5-rwc" id="Ghz-S8-2ZJ"/>
+                        <segue destination="dlu-1s-jsU" kind="show" identifier="goToHome" id="woG-Qz-IOl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KPc-JH-fxY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2865.217391304348" y="126.5625"/>
+        </scene>
+        <!--HomeScreen-->
+        <scene sceneID="8vk-FV-Qxc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeScreen" id="dlu-1s-jsU" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9aX-cM-Iak"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Bk-xN-HtU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3433" y="272"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="z1S-bY-g9u">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MxE-PT-5MK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1VI-rv-dQp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HPZ-FB-C2R" kind="relationship" relationship="rootViewController" id="DL8-9n-RN0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ORx-qm-gdz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1955.072463768116" y="126.5625"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="4vN-sd-dDO">
+            <size key="intrinsicContentSize" width="62" height="39"/>
+        </designable>
+    </designables>
+</document>

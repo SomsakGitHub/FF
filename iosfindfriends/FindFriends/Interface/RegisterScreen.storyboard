@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="klh-Ok-yAL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--RegisterVC-->
+        <scene sceneID="Nge-ej-7Zd">
+            <objects>
+                <viewController id="klh-Ok-yAL" customClass="RegisterVC" customModule="FindFriends" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0zo-D6-U44">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s01-DR-o5f">
+                                <rect key="frame" x="0.0" y="64" width="414" height="798"/>
+                                <color key="backgroundColor" red="0.15686274509803921" green="0.1764705882352941" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="emailCell" rowHeight="50" id="yDG-Xe-QwZ" customClass="RegisterTableViewCell" customModule="FindFriends" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yDG-Xe-QwZ" id="hNL-b2-kfL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k72-1P-thc">
+                                                    <rect key="frame" x="41.5" y="10" width="331" height="40"/>
+                                                    <subviews>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4CF-Mp-tRu">
+                                                            <rect key="frame" x="0.0" y="2" width="331" height="36"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="4CF-Mp-tRu" firstAttribute="height" secondItem="k72-1P-thc" secondAttribute="height" multiplier="0.9" id="4EN-En-gee"/>
+                                                        <constraint firstItem="4CF-Mp-tRu" firstAttribute="centerY" secondItem="k72-1P-thc" secondAttribute="centerY" id="7Sn-TM-ULo"/>
+                                                        <constraint firstItem="4CF-Mp-tRu" firstAttribute="centerX" secondItem="k72-1P-thc" secondAttribute="centerX" id="FYQ-jW-e2O"/>
+                                                        <constraint firstItem="4CF-Mp-tRu" firstAttribute="width" secondItem="k72-1P-thc" secondAttribute="width" id="dWU-a8-Kk4"/>
+                                                        <constraint firstItem="4CF-Mp-tRu" firstAttribute="centerY" secondItem="k72-1P-thc" secondAttribute="centerY" id="joU-qI-2Ua"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="k72-1P-thc" firstAttribute="width" secondItem="hNL-b2-kfL" secondAttribute="width" multiplier="0.8" id="7nn-Xg-0xa"/>
+                                                <constraint firstItem="k72-1P-thc" firstAttribute="height" secondItem="hNL-b2-kfL" secondAttribute="height" multiplier="0.8" id="Yyd-ab-vc4"/>
+                                                <constraint firstAttribute="bottom" secondItem="k72-1P-thc" secondAttribute="bottom" id="je3-Az-wkl"/>
+                                                <constraint firstItem="k72-1P-thc" firstAttribute="centerX" secondItem="hNL-b2-kfL" secondAttribute="centerX" id="v7q-kA-afx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="emailTextField" destination="4CF-Mp-tRu" id="fRr-Q1-Bt8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="passwordCell" rowHeight="50" id="uxq-2D-vSx" customClass="RegisterTableViewCell" customModule="FindFriends" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="78" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uxq-2D-vSx" id="QwQ-6v-jBT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Nc-oF-t4b">
+                                                    <rect key="frame" x="41.5" y="10" width="331" height="40"/>
+                                                    <subviews>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wIh-5O-JIw">
+                                                            <rect key="frame" x="0.0" y="2" width="331" height="36"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        </textField>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHd-VW-Gig">
+                                                            <rect key="frame" x="300" y="9" width="26" height="22"/>
+                                                            <state key="normal" image="eye" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="passwordHidden:" destination="uxq-2D-vSx" eventType="touchUpInside" id="b2l-ZF-i2a"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="wIh-5O-JIw" firstAttribute="centerY" secondItem="0Nc-oF-t4b" secondAttribute="centerY" id="1zC-HS-gdE"/>
+                                                        <constraint firstItem="wIh-5O-JIw" firstAttribute="centerX" secondItem="0Nc-oF-t4b" secondAttribute="centerX" id="GFe-8Q-iaY"/>
+                                                        <constraint firstItem="UHd-VW-Gig" firstAttribute="centerY" secondItem="0Nc-oF-t4b" secondAttribute="centerY" id="Ga2-Rh-Avv"/>
+                                                        <constraint firstItem="wIh-5O-JIw" firstAttribute="width" secondItem="0Nc-oF-t4b" secondAttribute="width" id="MjL-nP-yRZ"/>
+                                                        <constraint firstItem="wIh-5O-JIw" firstAttribute="height" secondItem="0Nc-oF-t4b" secondAttribute="height" multiplier="0.9" id="RuC-bp-gPY"/>
+                                                        <constraint firstItem="wIh-5O-JIw" firstAttribute="centerY" secondItem="0Nc-oF-t4b" secondAttribute="centerY" id="xQa-f4-4ha"/>
+                                                        <constraint firstAttribute="trailing" secondItem="UHd-VW-Gig" secondAttribute="trailing" constant="5" id="zDT-3Y-nhB"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="0Nc-oF-t4b" firstAttribute="centerX" secondItem="QwQ-6v-jBT" secondAttribute="centerX" id="B14-PT-Nwa"/>
+                                                <constraint firstItem="0Nc-oF-t4b" firstAttribute="height" secondItem="QwQ-6v-jBT" secondAttribute="height" multiplier="0.8" id="Ep0-tF-O6X"/>
+                                                <constraint firstAttribute="bottom" secondItem="0Nc-oF-t4b" secondAttribute="bottom" id="U2c-CL-8c7"/>
+                                                <constraint firstItem="0Nc-oF-t4b" firstAttribute="width" secondItem="QwQ-6v-jBT" secondAttribute="width" multiplier="0.8" id="rfJ-xT-coC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="passwordHiddenBTN" destination="UHd-VW-Gig" id="Jj4-Zg-uql"/>
+                                            <outlet property="passwordTextField" destination="wIh-5O-JIw" id="aZl-fJ-Cad"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="confirmPasswordCell" rowHeight="50" id="xt6-7q-XK4" customClass="RegisterTableViewCell" customModule="FindFriends" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="128" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xt6-7q-XK4" id="t6f-07-DOO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nb5-r4-iUL">
+                                                    <rect key="frame" x="41.5" y="10" width="331" height="40"/>
+                                                    <subviews>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lhp-bO-WG8">
+                                                            <rect key="frame" x="0.0" y="2" width="331" height="36"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        </textField>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbE-zF-Lav">
+                                                            <rect key="frame" x="300" y="9" width="26" height="22"/>
+                                                            <state key="normal" image="eye" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="confirmPasswordHidden:" destination="xt6-7q-XK4" eventType="touchUpInside" id="eEu-0p-DI1"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="lhp-bO-WG8" firstAttribute="centerY" secondItem="nb5-r4-iUL" secondAttribute="centerY" id="03V-O6-Ysu"/>
+                                                        <constraint firstAttribute="trailing" secondItem="dbE-zF-Lav" secondAttribute="trailing" constant="5" id="EG1-92-w8g"/>
+                                                        <constraint firstItem="dbE-zF-Lav" firstAttribute="centerY" secondItem="nb5-r4-iUL" secondAttribute="centerY" id="Mxp-of-7uL"/>
+                                                        <constraint firstItem="lhp-bO-WG8" firstAttribute="centerY" secondItem="nb5-r4-iUL" secondAttribute="centerY" id="bGz-7y-oBo"/>
+                                                        <constraint firstItem="lhp-bO-WG8" firstAttribute="height" secondItem="nb5-r4-iUL" secondAttribute="height" multiplier="0.9" id="fQi-R7-DZb"/>
+                                                        <constraint firstItem="lhp-bO-WG8" firstAttribute="width" secondItem="nb5-r4-iUL" secondAttribute="width" id="fxc-EV-B41"/>
+                                                        <constraint firstItem="lhp-bO-WG8" firstAttribute="centerX" secondItem="nb5-r4-iUL" secondAttribute="centerX" id="tTq-kz-2as"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="nb5-r4-iUL" secondAttribute="bottom" id="297-2b-aPL"/>
+                                                <constraint firstItem="nb5-r4-iUL" firstAttribute="centerX" secondItem="t6f-07-DOO" secondAttribute="centerX" id="IrI-t9-EJM"/>
+                                                <constraint firstItem="nb5-r4-iUL" firstAttribute="width" secondItem="t6f-07-DOO" secondAttribute="width" multiplier="0.8" id="tOZ-Aa-7D1"/>
+                                                <constraint firstItem="nb5-r4-iUL" firstAttribute="height" secondItem="t6f-07-DOO" secondAttribute="height" multiplier="0.8" id="yfH-c4-xd6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="confirmPasswordHiddenBTN" destination="dbE-zF-Lav" id="Dtb-r1-1qM"/>
+                                            <outlet property="confirmPasswordTextField" destination="lhp-bO-WG8" id="jCu-wx-MJQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="registerCell" rowHeight="50" id="bAm-3a-9xL" customClass="RegisterTableViewCell" customModule="FindFriends" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="178" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bAm-3a-9xL" id="6tU-cs-Mt9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGc-ct-PjN">
+                                                    <rect key="frame" x="41.5" y="10" width="331" height="40"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFa-oc-PKH" customClass="ButtonIBDesignable" customModule="FindFriends" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="331" height="40"/>
+                                                            <color key="backgroundColor" red="0.70588235294117641" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                            <state key="normal" title="Register">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="6"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="registerAction:" destination="bAm-3a-9xL" eventType="touchUpInside" id="dne-KH-kEC"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="kFa-oc-PKH" firstAttribute="width" secondItem="rGc-ct-PjN" secondAttribute="width" id="8FO-bk-rnM"/>
+                                                        <constraint firstItem="kFa-oc-PKH" firstAttribute="centerX" secondItem="rGc-ct-PjN" secondAttribute="centerX" id="GoB-0y-jec"/>
+                                                        <constraint firstItem="kFa-oc-PKH" firstAttribute="height" secondItem="rGc-ct-PjN" secondAttribute="height" id="Vmr-J4-ad5"/>
+                                                        <constraint firstItem="kFa-oc-PKH" firstAttribute="centerY" secondItem="rGc-ct-PjN" secondAttribute="centerY" id="smA-ca-knB"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="rGc-ct-PjN" secondAttribute="bottom" id="hBH-2X-aEf"/>
+                                                <constraint firstItem="rGc-ct-PjN" firstAttribute="height" secondItem="6tU-cs-Mt9" secondAttribute="height" multiplier="0.8" id="hGx-xO-Vwb"/>
+                                                <constraint firstItem="rGc-ct-PjN" firstAttribute="width" secondItem="6tU-cs-Mt9" secondAttribute="width" multiplier="0.8" id="kUp-08-nwB"/>
+                                                <constraint firstItem="rGc-ct-PjN" firstAttribute="centerX" secondItem="6tU-cs-Mt9" secondAttribute="centerX" id="udw-LP-jhg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="klh-Ok-yAL" id="zHY-Cv-dgC"/>
+                                    <outlet property="delegate" destination="klh-Ok-yAL" id="L9H-ok-6Wu"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XkE-y6-1qm"/>
+                        <color key="backgroundColor" red="0.15686274509803921" green="0.1764705882352941" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="XkE-y6-1qm" firstAttribute="bottom" secondItem="s01-DR-o5f" secondAttribute="bottom" id="6vt-LJ-fyx"/>
+                            <constraint firstItem="s01-DR-o5f" firstAttribute="centerX" secondItem="0zo-D6-U44" secondAttribute="centerX" id="PMj-G8-K2I"/>
+                            <constraint firstItem="s01-DR-o5f" firstAttribute="width" secondItem="XkE-y6-1qm" secondAttribute="width" id="md4-lE-uZ9"/>
+                            <constraint firstItem="s01-DR-o5f" firstAttribute="top" secondItem="XkE-y6-1qm" secondAttribute="top" constant="20" id="sbS-0i-Ygf"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNM-NB-cGk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153.62318840579712" y="112.5"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="kFa-oc-PKH">
+            <size key="intrinsicContentSize" width="82" height="39"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="eye" catalog="system" width="128" height="81"/>
+    </resources>
+</document>

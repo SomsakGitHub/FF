@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Q2-ja-8nt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LocationVC-->
+        <scene sceneID="VCJ-QH-NfE">
+            <objects>
+                <viewController storyboardIdentifier="locationVC" id="0Q2-ja-8nt" customClass="LocationVC" customModule="Marauders" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5hS-Z5-ygy" customClass="IBDesignableView" customModule="Marauders" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Wt-Rm-6aj">
+                                <rect key="frame" x="177.5" y="433" width="59" height="30"/>
+                                <state key="normal" title="Location">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="enableAction:" destination="0Q2-ja-8nt" eventType="touchUpInside" id="r0Q-nw-XKh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qPC-jQ-fYD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Wt-Rm-6aj" firstAttribute="centerX" secondItem="5hS-Z5-ygy" secondAttribute="centerX" id="E9n-so-xEe"/>
+                            <constraint firstItem="4Wt-Rm-6aj" firstAttribute="centerY" secondItem="5hS-Z5-ygy" secondAttribute="centerY" id="scQ-76-8ap"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <segue destination="8rs-zP-Igk" kind="show" identifier="goToHome" id="3WN-ea-DsQ"/>
+                        <segue destination="xdt-pO-bjX" kind="show" identifier="goToLocationSetting" id="wKs-8q-mJT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mCS-Yx-vqk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-243" y="127"/>
+        </scene>
+        <!--Location SettingVC-->
+        <scene sceneID="uoZ-mg-1h1">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="xdt-pO-bjX" customClass="LocationSettingVC" customModule="Marauders" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E0V-L0-SKM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQA-BY-Gnq">
+                                <rect key="frame" x="162.5" y="433" width="89" height="30"/>
+                                <state key="normal" title="Open setting"/>
+                                <connections>
+                                    <action selector="openSettingAction:" destination="xdt-pO-bjX" eventType="touchUpInside" id="O2u-oZ-qqh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tjg-X2-N8J"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QQA-BY-Gnq" firstAttribute="centerX" secondItem="E0V-L0-SKM" secondAttribute="centerX" id="EV2-xE-dom"/>
+                            <constraint firstItem="QQA-BY-Gnq" firstAttribute="centerY" secondItem="E0V-L0-SKM" secondAttribute="centerY" id="d8h-T5-SAd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EAf-Nj-qYZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="che-Xb-Ial" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="127"/>
+        </scene>
+        <!--HomeScreen-->
+        <scene sceneID="sk1-mQ-cAD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeScreen" id="8rs-zP-Igk" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3bc-nP-27M"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aes-0k-YsN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301" y="-305"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
